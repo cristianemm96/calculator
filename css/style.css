@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#main-container{
+  display: flex;
+  justify-content: center;
+}
+
+#cal-container{
+  margin-top: 70px;
+}
+
+#main-container > #cal-container > #screen-container{
+    grid-area:screen; 
+    margin:0px;
+    height:80px;
+}
+  
+#main-container > #cal-container > #button-container{
+    grid-area:buttons;
+    margin-left:7px;
+    margin-right:7px;
+    margin-bottom:5px;
+    margin-top: 3px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:5px;
+}
+
+#cal-container{
+  display: grid;
+  width: 35%;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: "screen"
+                        "buttons";
+  grid-gap:5px;
+  background-color:black;
+}
+
+.button{
+  border: 1px black solid;
+  background-color: #5dade2;
+}
+
+.button:active{
+  background-color: rgb(227, 243, 135);
+}
+
+#screen{
+  margin-left: 7px;
+  margin-top: 7px;
+  height: 75px;
+  width: 97%;
+  background-color: gray;
+  border:none;
+  resize: none;
+  font-size: 55px;
+  font-weight: bold;
+  text-align: right;
+  line-height: 70px;
+}
+
+[id='0']{
+  grid-column: 1/3;
+}
+
+[id='AC']{
+  background-color: #e09d61;
+}
+[id='+/-']{
+    background-color: #e09d61;
+}
+[id='%']{
+    background-color: #e09d61;
+}
+[id='/']{
+    background-color:#2ecc71;
+}
+[id='*']{
+    background-color:#2ecc71;
+}
+[id='-']{
+    background-color:#2ecc71;
+}
+[id='+']{
+    background-color:#2ecc71;
+}
+[id='=']{
+    background-color:#2ecc71;;
+}
+
